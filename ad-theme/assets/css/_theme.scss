@@ -1,0 +1,103 @@
+@import "./_breakpoints.scss";
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./../fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./../fonts/Poppins-Bold.ttf");
+  font-weight: bold;
+}
+
+// ----------------------- navbar --------------------------------
+
+// mobile navbar toggler
+.custom-toggler .navbar-toggler-icon {
+  @include xs {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+}
+.custom-toggler.navbar-toggler {
+  @include xs {
+    border-color: white;
+    width: 50px;
+    height: 50px;
+    @include flex-center;
+  }
+}
+.alignwide {
+  margin: 0 auto;
+    max-width: 1300px; //container width
+  }
+  .alignfull {
+    margin-left  : calc( -100vw / 2 + 100% / 2 );
+    margin-right : calc( -100vw / 2 + 100% / 2 );
+    max-width    : 100vw;
+  }
+  .alignfull img {
+    width: 100vw;
+  }
+
+.site-layout {
+  font-family: Poppins;
+  .navbar {
+    min-height: 60px;
+    @include xs {
+      min-height: unset;
+    }
+    .navbar-items {
+      display: flex;
+      width: 1400px;
+      margin: 0 auto;
+      align-items: center;
+      @include xs {
+        width: 100%;
+        justify-content: space-around;
+        margin: 10px 0;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      #navbarMenu {
+        @include xs {
+          margin-bottom: -18px;
+          margin-top: 10px;
+          // background-color: black;
+        }
+        ul {
+          margin-top: 1rem;
+          li {
+            a {
+              color: #404040;
+              font-size: 18px;
+              transition: 0.2s ease;
+              position: relative;
+              padding-bottom: 5px;
+              &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 4px;
+                border-radius: 4px;
+                background-color: #18272f;
+                bottom: 0;
+                left: 0;
+                transform-origin: right;
+                transform: scaleX(0);
+                transition: transform 0.3s ease-in-out;
+              }
+              &:hover::before {
+                transform-origin: left;
+                transform: scaleX(1);
+              }
+              @include xs {
+                font-size: 22px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

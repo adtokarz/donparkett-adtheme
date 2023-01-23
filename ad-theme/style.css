@@ -1,0 +1,46 @@
+/*
+Theme Name: Ad-theme
+Author: Adrian Tokarz
+*/
+
+
+
+ /* --------------- header -------------- */
+ .custom-logo {
+    width: 110px;
+    height: auto;
+}
+.current-menu-item {
+  color: red !important;
+}
+#navbarMenu {
+  justify-content: flex-end;
+}
+
+#navbarMenu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+}
+#navbarMenu ul{
+    list-style-type: none;
+}
+nav .nav-item a{
+    display: flex;
+ }
+ .site-layout .navbar{
+    align-items: flex-start;
+ }
+@media only screen and (min-width: 768px) {
+    .site-container {
+        max-width: 1300px;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+      }
+      #navbarMenu ul {
+        display: flex;
+        gap: 50px;
+      }
+
+}

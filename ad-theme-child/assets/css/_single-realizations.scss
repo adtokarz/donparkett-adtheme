@@ -1,0 +1,14 @@
+.single-post__wrapper__content {
+  flex-direction: column;
+  .single-post__gallery {
+    display: flex;
+    gap: 27px;
+    margin: 0 10%;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    img {
+      flex-basis: 33%;
+      width: 100%;
+    }
+  }
+}
